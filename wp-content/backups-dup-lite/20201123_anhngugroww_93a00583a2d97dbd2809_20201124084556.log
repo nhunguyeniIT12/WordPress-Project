@@ -1,0 +1,108 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: November 24, 2020 8:46 am
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.3.40
+WORDPRESS:	5.5.3
+PHP INFO:	7.4.12 | SAPI: fpm-fcgi
+SERVER:		Apache 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 4294967296 (128M default) 
+MEMORY STACK: 14MB
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported
+[PHP ERR][NOTICE] MSG:Only variables should be passed by reference [CODE:8|FILE:/mnt/block/www/anhngugrow.server2.trinchera.dev/httpdocs/wp-content/plugins/duplicator/classes/package/class.pack.database.php|LINE:366]
+do_action('wp_ajax_duplicator_package_build'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_build, DUP_Package->runZipBuild, DUP_Database->build, DUP_Database->mysqlDump, DUP_Handler::error, DUP_Handler::getMessage
+SQL CREATED: 20201123_anhngugroww_93a00583a2d97dbd2809_20201124084556_database.sql
+SQL FILE SIZE: 22.78MB (23884347)
+SQL FILE TIME: 2020-11-24 08:46:28
+SQL RUNTIME: 1.73 sec.
+
+********************************************************************************
+ARCHIVE (ZIP):
+********************************************************************************
+ARCHIVE DIR:  /mnt/block/www/anhngugrow.server2.trinchera.dev/httpdocs
+ARCHIVE FILE: 20201123_anhngugroww_93a00583a2d97dbd2809_20201124084556_archive.zip
+FILTERS: *OFF*
+DIRS:
+	not set
+FILES:
+	not set
+EXTS:  not set
+----------------------------------------
+COMPRESSING
+SIZE:	329.62MB
+STATS:	Dirs 1,637 | Files 12,573
+SQL ADDED: 20201123_anhngugroww_93a00583a2d97dbd2809_20201124084556_database.sql
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 14210
+    [filename] => /mnt/block/www/anhngugrow.server2.trinchera.dev/httpdocs/wp-content/backups-dup-lite/tmp/20201123_anhngugroww_93a00583a2d97dbd2809_20201124084556_archive.zip
+    [comment] => 
+)
+
+FILE ADDED TO ZIP: 14209
+[PHP ERR][WARN] MSG:ZipArchive::close(): Write error: Disk quota exceeded [CODE:2|FILE:/mnt/block/www/anhngugrow.server2.trinchera.dev/httpdocs/wp-content/plugins/duplicator/classes/package/class.pack.archive.zip.php|LINE:205]
+do_action('wp_ajax_duplicator_package_build'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_build, DUP_Package->runZipBuild, DUP_Archive->build, DUP_Zip::create, ZipArchive->close, DUP_Handler::error, DUP_Handler::getMessage
+
+==================================================================================
+DUPLICATOR ERROR
+Please try again! If the error persists see the Duplicator 'Help' menu.
+---------------------------------------------------------------------------------
+MESSAGE:
+	ZipArchive close failure.
+DETAILS:
+	The ZipArchive engine is having issues zipping up the files on this server. For more details visit the FAQ
+I'm getting a ZipArchive close failure when building. How can I resolve this?
+[https://snapcreek.com/duplicator/docs/faqs-tech/#faq-package-165-q]
+TRACE:
+	 1. class.pack.archive.zip.php : Error (214)
+	 2. class.pack.archive.php : create (105)
+	 3. class.pack.php : build (1313)
+	 4. ctrl.package.php : runZipBuild (98)
+	 5. class-wp-hook.php : duplicator_package_build (287)
+	 6. class-wp-hook.php : apply_filters (311)
+	 7. plugin.php : do_action (478)
+	 8. admin-ajax.php : do_action (176)
+==================================================================================
+
+building installer
+[PHP ERR][WARN] MSG:is_readable(): open_basedir restriction in effect. File(/dev/urandom) is not within the allowed path(s): (/mnt/block/www/anhngugrow.server2.trinchera.dev/:/tmp/) [CODE:2|FILE:/mnt/block/www/anhngugrow.server2.trinchera.dev/httpdocs/wp-content/plugins/duplicator/classes/class.password.php|LINE:63]
+do_action('wp_ajax_duplicator_package_build'), WP_Hook->do_action, WP_Hook->apply_filters, duplicator_package_build, DUP_Package->runZipBuild, DUP_Installer->build, DUP_Installer->create_enhanced_installer_files, DUP_Installer->create_archive_config_file, DUP_PasswordHash->HashPassword, DUP_PasswordHash->get_random_bytes, is_readable, DUP_Handler::error, DUP_Handler::getMessage
+add_extra_files1
+add_extra_files2
+add_extra_files3
+add_extra_files4
+Doing archive file check
+add_extra_files5
+add_extra_files6
+add_extra_files8
+Successfully opened zip /mnt/block/www/anhngugrow.server2.trinchera.dev/httpdocs/wp-content/backups-dup-lite/tmp/20201123_anhngugroww_93a00583a2d97dbd2809_20201124084556_archive.zip
+Adding enhanced installer files to archive using ZipArchive
+Installer files added to archive
+Added to archive
+After ziparchive close when adding installer
+
+********************************************************************************
+INTEGRITY CHECKS:
+********************************************************************************
+SQL FILE: 22.78MB
+INSTALLER FILE: 61.32KB
+ARCHIVE FILE: 3.68MB 
+EXPECTED FILE/DIRECTORY COUNT: 14,210
+ACTUAL FILE/DIRECTORY COUNT: 14,209
+ARCHIVE CONSISTENCY TEST: Pass
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 8.05 sec.
+PEAK PHP MEMORY USED: 22.11MB
+DONE PROCESSING => 20201123_anhngugroww November 24, 2020 8:46 am
+
